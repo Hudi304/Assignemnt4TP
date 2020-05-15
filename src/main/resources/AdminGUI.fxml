@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentation.AdminGUI">
+
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="111.0" layoutY="274.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <Button fx:id="AddButton" layoutX="14.0" layoutY="98.0" mnemonicParsing="false" onAction="#addBasicProduct" text="Add" />
+            <TextField fx:id="textFldName" layoutX="14.0" layoutY="32.0" promptText="name" />
+            <TextField fx:id="textFldPrice" layoutX="14.0" layoutY="65.0" promptText="price" />
+            <Label layoutX="14.0" layoutY="6.0" text="Add Basic Product " />
+            <Label layoutX="199.0" layoutY="6.0" text="Add Composit Product" />
+            <ComboBox fx:id="comboBox" layoutX="199.0" layoutY="98.0" prefWidth="150.0" promptText="Basic Items" />
+            <TextField fx:id="textFldCName" layoutX="199.0" layoutY="32.0" promptText="name" />
+            <TextField fx:id="textFldCPrice" layoutX="199.0" layoutY="65.0" promptText="price" />
+            <Button fx:id="saveCompProd" layoutX="226.0" layoutY="321.0" mnemonicParsing="false" onAction="#saveCompProd" text="saveCompProd" />
+            <TreeView fx:id="treeView" layoutX="199.0" layoutY="175.0" prefHeight="131.0" prefWidth="150.0" />
+            <Button fx:id="addBProd" layoutX="225.0" layoutY="134.0" mnemonicParsing="false" onAction="#addBProdToCompProd" text="Add basic prod" />
+            <Button fx:id="saveToFile" layoutX="525.0" layoutY="334.0" mnemonicParsing="false" onAction="#saveRestToFile" text="Save all to File " />
+            <TableView layoutX="373.0" layoutY="23.0" prefHeight="299.0" prefWidth="248.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
